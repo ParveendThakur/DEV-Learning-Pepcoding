@@ -4,5 +4,22 @@
 
 body{
     margin : 0px;
-    padding : 0px;
+    padding : 0px; 
+}
+
+.toolbox-cont{
+    height: 5rem;
+    background-color: black;
+}
+
+.toolbox-priority-cont{
+    height: 3rem;
+    background-color: aqua;
+    width: 18rem;
+}
+
+.action-btn-cont{
+    background-color: beige;
+    height: 3rem;
+    width: 10rem;
 }
