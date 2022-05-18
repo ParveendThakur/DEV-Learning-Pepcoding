@@ -25,3 +25,9 @@ body{
     height: 3rem;
     width: 10rem;
 }
+
+.color{
+    background-color: red;
+    height: 2rem;
+    width: 2rem;
+}
