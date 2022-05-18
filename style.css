@@ -55,3 +55,11 @@ body{
 .black{
     background-color: black;
 }
+
+.add-btn{
+    font-size: 1.5rem;
+}
+
+.remove-btn{
+    font-size: 1.5rem;
+}
