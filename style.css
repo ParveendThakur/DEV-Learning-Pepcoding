@@ -10,6 +10,8 @@ body{
 .toolbox-cont{
     height: 5rem;
     background-color: black;
+    display: flex;
+    align-items: center;
 }
 
 .toolbox-priority-cont{
