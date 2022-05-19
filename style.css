@@ -69,6 +69,10 @@ body{
 }
 
 .textarea-cont{
+    outline: none;
+    resize: none;
+    border: none;
+    
 
 }
 
@@ -77,5 +81,5 @@ body{
 }
 
 .priority-color{
-    
+
 }
