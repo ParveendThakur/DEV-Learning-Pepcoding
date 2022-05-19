@@ -1,14 +1,8 @@
 let addBtn = document.querySelector(".add-btn");
-let modal = document.querySelector(".modal-cont");
-let addModal = true;
+let modal = document.querySelector(".model-cont")
+
 
 addBtn.addEventListener("click",function(){
-    if(addModal){
-        // show modal
-        modal.style.display= "flex";
-    }else{
-        // hide modal
-        modal.style.display = "none";
-    }
-    addModal = !addModal;
+    modal.style.display = "flex";
+    
 })
