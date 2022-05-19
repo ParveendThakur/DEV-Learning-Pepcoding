@@ -35,7 +35,6 @@ body{
 }
 
 .color{
-    background-color: red;
     height: 1.5rem;
     width: 3rem;
 }
@@ -51,7 +50,6 @@ body{
 .green{
     background-color: lightgreen;
 }
-
 .black{
     background-color: black;
 }
@@ -91,11 +89,29 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
 }
 
 .priority-color{
     height: 2rem;
     width: 2rem;
+}
 
+.main-cont{
+
+}
+
+.ticket-cont{
+
+}
+
+.ticket-color{
+
+}
+
+.ticket-id{
+
+}
+
+.task-area{
+    
 }
