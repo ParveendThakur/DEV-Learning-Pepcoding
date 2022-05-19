@@ -65,15 +65,21 @@ body{
 }
 
 .model-cont{
-
+    background-color: lightgray;
+    height: 50vh;
+    width: 50vw;
+    display: flex;
 }
 
 .textarea-cont{
     outline: none;
     resize: none;
     border: none;
-    
-
+    background-color: brown;
+    height: 100%;
+    width: 75%;
+    font-size: 2rem;
+    padding: 2rem;
 }
 
 .priority-color-cont{
@@ -81,5 +87,7 @@ body{
 }
 
 .priority-color{
+    height: 2rem;
+    width: 2rem;
 
 }
