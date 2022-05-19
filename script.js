@@ -9,6 +9,6 @@ addBtn.addEventListener("click",function(){
     }else{
         // hide modal
         modal.style.display = "none";
-    } 
-    
+    }
+    addModal = !addModal;
 })
