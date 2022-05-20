@@ -97,21 +97,28 @@ body{
 }
 
 .main-cont{
+    margin-top: 2rem;
 
 }
 
 .ticket-cont{
+    background-color: aqua;
+    height: 10rem;
+    width: 15rem;
 
 }
 
 .ticket-color{
+    height: 1rem;
 
 }
 
 .ticket-id{
-
+    height: 1rem;
+    background-color: red;
 }
 
 .task-area{
+    height: ;
 
 }
