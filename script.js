@@ -27,8 +27,6 @@ modalCont.addEventListener("keydown",function(e){
 })
 
 
-
-
 function createTicket(task){
     // <div class="ticket-cont">
             // <div class="ticket-color"></div>
