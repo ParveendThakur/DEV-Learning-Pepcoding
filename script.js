@@ -3,7 +3,9 @@ let modalCont = document.querySelector(".model-cont");
 let taskAreaCont = document.querySelector(".textarea-cont");
 let mainCont = document.querySelector(".main-cont");
 let allPriorityColors = document.querySelectorAll("priority-color");
+let removeBtn = document.querySelectorAll(".remove-btn");
 let addModal = true;
+let removeFlag = false;
 let modalPriorityColor = 'black' ;
 
 addBtn.addEventListener("click",function(){
@@ -36,6 +38,16 @@ modalCont.addEventListener("keydown",function(e){
         modalCont.style.display = "none";
         addModal = !addModal;
     }
+})
+
+removeBtn.addEventListener("click",function(){
+    if(removeFlag){
+        removeBtn.style.color = 'black'
+    }else{
+        removeBtn.style.color = "red"
+    }
+    removeFlag = !removeFlag;
+
 })
 
 
