@@ -56,7 +56,6 @@ function createTicket(ticketColor,task){
             // <div class="ticket-color"></div>
             // <div class="ticket-id"></div>
             // <div class="task-area"></div>
-
     //     </div>
     let ticketCont = document.createElement("div");
     ticketCont.setAttribute('class','ticket-cont');
