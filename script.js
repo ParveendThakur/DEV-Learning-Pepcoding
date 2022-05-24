@@ -31,7 +31,7 @@ for(let i=0;i<allPriorityColors.length;i++){
 modalCont.addEventListener("keydown",function(e){
     let key = e.key;
     if (key == "Enter"){
-        createTicket(taskAreaCont.value);
+        createTicket(modalPriorityColor, taskAreaCont.value);
         taskAreaCont.value = "";
         modalCont.style.display = "none";
         addModal = !addModal;
