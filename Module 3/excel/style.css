@@ -3,3 +3,23 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
+.menu{
+    border: 0.5px solid;
+    height: 30px;
+}
+
+.address{
+    border: 0.5px solid;
+    height: 30px;
+}
+
+.cells{
+    height: 85vh;
+    background-color: aquamarine;
+}
+
+.sheets{
+    border: 0.5px solid;
+    height: 30px;
+}
