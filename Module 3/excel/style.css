@@ -4,19 +4,20 @@
     box-sizing: border-box;
 }
 
-.menu.options{
+.menu-options{
     border: 0.5px solid;
     height: 30px;
 }
 
-.address{
+.address-content{
     border: 0.5px solid;
     height: 30px;
 }
 
-.cells{
+.cells-content{
     height: 85vh;
     background-color: aquamarine;
+    overflow: auto;
 }
 
 .sheets{
