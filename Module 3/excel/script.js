@@ -1,7 +1,11 @@
 let cellscontent = document.querySelector(".cells-content");
 
+
 function initcells(){
-    let cell = "";
+    let cell = "<div class='top-left-cell'></div>";
+    for(let i=0;i<26;i++){
+        cell+="<div"
+    }
     for (let i=0; i<100; i++){
         cell+="<div class = 'row'>";
         // column
@@ -12,3 +16,5 @@ function initcells(){
     }
     cellscontent.innerHTML = cell;
 }
+
+initcells();
