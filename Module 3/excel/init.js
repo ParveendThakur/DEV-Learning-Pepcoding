@@ -31,3 +31,24 @@ function initCells(){
 }
 
 initCells();
+
+let db;
+
+function initDb(){
+    db = [];
+    for(let i=0;i<100;i++){
+        let row = [];
+        for(let j=0;j<26;j++){
+            let name = String.fromCharCode(65+j)+(i+1)+"";
+            let cellObject = {
+                name:name,
+                value:""
+            }
+            row.push(cellObject);
+        }
+        db.push(row);
+    }
+}
+initDb();
+
+console.log(db);
