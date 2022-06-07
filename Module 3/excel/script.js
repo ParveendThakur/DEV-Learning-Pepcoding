@@ -1,5 +1,3 @@
-
-
 let topRow = document.querySelector(".top-row");
 let leftCol = document.querySelector(".left-col");
 let topLeftCell = document.querySelector(".top-left-cell");
