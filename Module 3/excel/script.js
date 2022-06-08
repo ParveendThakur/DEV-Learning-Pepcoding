@@ -33,12 +33,3 @@ for(let i=0;i<allCells.length;i++){
         console.log("After UPdate",cellObject);
     })
 }
-
-function getRowIdColIdFromElement(element){
-    let rowId = element.getAttribute("rowid");
-    let colId = element.getAttribute("colid");
-    return {
-        rowId,
-        colId
-    }
-}
