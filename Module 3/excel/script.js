@@ -52,9 +52,7 @@ for(let i=0;i<allCells.length;i++){
                 formulaInput.value = "";
                 cell.textContent = "";
                 removeFormula(cellObject);
-                
             }
-
         }
     })
 }
@@ -65,6 +63,9 @@ formulaInput.addEventListener("blur",function(e){
     if(formula){
         let {rowId,colId} = getRowIdColIdFromElement(lastSelectedCell);
         let cellObject = db[rowId][colId];
+        if (cellObject.formula){
+            removeFormula(cellObject);
+        }
         let computedValue = solveFormula(formula); // will implement in next commit
         //update db
         cellObject.value = computedValue;
