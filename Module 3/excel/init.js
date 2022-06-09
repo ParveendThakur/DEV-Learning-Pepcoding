@@ -31,10 +31,11 @@ function initCells(){
 
 initCells();
 
-let db;
+let sheetDB = [];
+let db;  // [[{},{},......{},{}.........]]
 
 function initDb(){
-    db = [];
+    let newsheetDB = [];
     for(let i=0;i<100;i++){
         let row = [];
         for(let j=0;j<26;j++){
@@ -48,8 +49,11 @@ function initDb(){
             }
             row.push(cellObject);
         }
-        db.push(row);
+        newsheetDB.push(row);
     }
+    db = newsheetDB;
+    sheetDB.push(newsheetDB);
+    console.log(sheetDB);
 }
 initDb();
 

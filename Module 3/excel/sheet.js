@@ -13,4 +13,16 @@ addSheetBtn.addEventListener("click",function(){
     sheetDiv.setAttribute("sheetId",sheetId);
     sheetDiv.innerText = `Sheet ${sheetId+1}`;
     sheetList.append(sheetDiv);
+    initUi();
+    initDb();
 })
+
+
+function initUi(){
+    for(let i=0; i<100; i++){
+        for(let j=0; j<26; j++){
+            let cell = document.querySelector(`div[rowid="${i}"][colid="${j}"]`);
+            cell.innerHTML = "";
+        }
+    }
+}
