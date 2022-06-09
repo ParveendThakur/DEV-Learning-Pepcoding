@@ -26,14 +26,14 @@ for(let i=0;i<allCells.length;i++){
         // Update UI
         formulaInput.value = cellObject.formula;
 
-        cellObject.fontStyle.bold?document.querySelector(".bold").classList.add("active-font-style"):
-        document.querySelector(".bold").remove("active-font-style");
+        cellObject.fontStyle.bold?document.querySelector(".bold").classList.add(".active-font-style"):
+        document.querySelector(".bold").classList.remove("active-font-style");
 
-        cellObject.fontStyle.italic?document.querySelector(".italic").classList.add("active-font-style"):
-        document.querySelector(".italic").remove("active-font-style");
+        cellObject.fontStyle.italic?document.querySelector(".italic").classList.add(".active-font-style"):
+        document.querySelector(".italic").classList.remove("active-font-style");
 
         cellObject.fontStyle.underline?document.querySelector(".underline").classList.add("active-font-style"):
-        document.querySelector(".underline").remove("active-font-style");
+        document.querySelector(".underline").classList.remove("active-font-style");
     })
 
     allCells[i].addEventListener("blur",function(e){
