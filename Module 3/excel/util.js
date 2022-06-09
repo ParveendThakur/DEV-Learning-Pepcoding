@@ -30,9 +30,10 @@ function updateChildren(cellObject){
         cellUI.textContent = newValue;
         // update db
         childCellObject.value = newValue;
-        updateChildren(childCellObject)
+        updateChildren(childCellObject);
     }
 }
+
 
 function getRowIdColIdFromElement(element){
     let rowId = element.getAttribute("rowid");
@@ -44,7 +45,7 @@ function getRowIdColIdFromElement(element){
 }
 
 function getRowIdColIdFromAddress(address){
-    // address = A1
+    // address = A1, B2
     let colId = address.charCodeAt(0)-65;
     let rowId = Number(address.substring(1))-1;
     return {
