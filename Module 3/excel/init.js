@@ -32,7 +32,7 @@ function initCells(){
 initCells();
 
 let sheetDB = [];
-let db;  // [[{},{},......{},{}.........]]
+let db;  // [[{},{},......{},{}....{[[]]}.....]]
 let visitedCells;
 
 function initDb(){
