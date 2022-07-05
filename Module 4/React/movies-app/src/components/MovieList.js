@@ -9,6 +9,7 @@ class MovieList extends Component {
             pArr :[1]
         };
     }
+    
 
     render() {
         let moviesArr = movies.results
