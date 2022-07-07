@@ -37,6 +37,24 @@ class MovieList extends Component {
     }
 
 
+    handlePrev=()=>{
+        if(this.state.currPage!=1){
+            this.setState({
+                currPage:this.state.currPage-1
+            },this.changeMovies);
+        }
+    }
+
+    handlePageClick=(ele)=>{
+        if(ele!=this.state.currPage){
+            this.setState({
+                currPage: ele
+            },this.changeMovies);
+        }
+    }
+
+
+
     render() {
         let moviesArr = movies.results
         console.log("rednered");
