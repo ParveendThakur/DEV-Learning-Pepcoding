@@ -1,4 +1,7 @@
 // npm install react-router-dom
+// first 
+// npm uninstall react-router-dom
+
 
 import './App.css';
 import Feed from "./components/Feed"
