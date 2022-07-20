@@ -1,8 +1,4 @@
-// npm install react-router-dom
-// first 
-// npm uninstall react-router-dom
-// then 
-// npm install react-router-dom@5.3.1
+// npm install react-router-dom // first // npm uninstall react-router-dom // then // npm install react-router-dom@5.3.1
 
 import './App.css';
 import Feed from "./components/Feed"
@@ -13,6 +9,23 @@ import Signup from "./components/Signup"
 import {Switch,Route} from "react-router-dom"
 function App() {
   return (
+    <Switch>
+      <Route path="/feed">
+        <Feed></Feed>
+      </Route>
+      <Route path="/login">
+        <Login></Login>
+      </Route>
+      <Route path="/signup">
+        <Signup></Signup>
+      </Route>
+      <Route path="/profile">
+        <Profile></Profile>
+      </Route>
+      <Route >
+        <PageNotFound></PageNotFound>
+      </Route>
+    </Switch>
     
   );
 }
