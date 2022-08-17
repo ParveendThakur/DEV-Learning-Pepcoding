@@ -21,6 +21,7 @@ app.post("/sayHello",function(req,res){
     res.send("post wala Hello");
 })
 
+//post
 app.post("/sayHello",function(req,res){
     user = req.body;
     res.json({
@@ -29,12 +30,20 @@ app.post("/sayHello",function(req,res){
     })
 })
 
+//patch
 app.patch("/sayHello",function(req,res){
     dataToUpdate = req.body;
-    console.log(dataToUpdate);
-    res.send("Hello from patch");
+
+    for(key in dataToUpdate){
+        user[key] = dataToUpdate[key];
+    }
+    res.json({
+        message:"Data updated",
+        user:user
+    })
 })
 
+//delete
 app.delete("/sayHello",function(req,res){
     user = {};
     res.json({
