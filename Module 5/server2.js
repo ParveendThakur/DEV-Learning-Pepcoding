@@ -37,6 +37,8 @@ const app = express();
 // })
 
 // case 3
+// middleware -> middleman
+//user defined middleware -> next call
 
 
 app.listen(3000,function(){
