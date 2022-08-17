@@ -40,6 +40,19 @@ const app = express();
 // middleware -> middleman
 //user defined middleware -> next call
 
+app.use(function(req,res,next){
+    console.log("use will always run");
+    next();
+})
+
+app.post("/simple",function(req,res){
+    res.send("hello from post");
+})
+
+
+
+
+
 
 app.listen(3000,function(){
     console.log("server is started at 3000");
