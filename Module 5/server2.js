@@ -17,3 +17,8 @@ const app = express();
 // })
 
 
+
+
+app.listen(3000,function(){
+    console.log("server is started at 3000");
+})
