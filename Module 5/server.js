@@ -5,6 +5,7 @@ const express = require("express")
 
 const app = express();
 
+
 app.get("/",function(req,res){
     res.send("Homepage");
 })
@@ -17,6 +18,14 @@ app.get("/sayhello",function(req,res){
 app.post("/sayHello",function(req,res){
     console.log(req);
     res.send("post wala Hello");
+})
+
+app.post("/sayHello",function(req,res){
+    user = req.body;
+    res.json({
+        message:"Data recieved Successfully",
+        user:user
+    })
 })
 
 app.get("/getMultiply/:num1/:num2",function(req,res){
