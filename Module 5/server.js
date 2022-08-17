@@ -5,6 +5,7 @@ const express = require("express")
 
 const app = express();
 
+let user;
 
 app.get("/",function(req,res){
     res.send("Homepage");
@@ -26,6 +27,12 @@ app.post("/sayHello",function(req,res){
         message:"Data recieved Successfully",
         user:user
     })
+})
+
+app.patch("/sayHello",function(req,res){
+    dataToUpdate = req.body;
+    console.log(dataToUpdate);
+    res.send("Hello from patch");
 })
 
 app.get("/getMultiply/:num1/:num2",function(req,res){
