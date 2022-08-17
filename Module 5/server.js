@@ -5,14 +5,25 @@ const express = require("express")
 
 const app = express();
 
+app.get("/",function(req,res){
+    res.send("Homepage");
+})
+
 // get karna hai data from sayHello
 app.get("/sayhello",function(req,res){
     res.send("Hello from server");
 })
 
+app.post("/sayHello",function(req,res){
+    console.log(req);
+    res.send("post wala Hello");
+})
+
+
+
 // get kana hai data from sayBye
 app.get("/sayBye",function(req,res){
-    res.end("Bye");
+    res.send("Bye");
 })
 
 // 3000 - address of a server -> on a given machine
