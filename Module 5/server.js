@@ -9,6 +9,6 @@ app.get("/",function(req,res){
     res.send("Hello from server");
 })
 
-app.listen(300,function(){
-    console.log("server started at port 300")
+app.listen(3000,function(){
+    console.log("server started at port 3000")
 });
