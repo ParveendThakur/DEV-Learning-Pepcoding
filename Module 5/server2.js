@@ -10,3 +10,6 @@ app.get("/simple",function(req,res){
 
 
 
+app.listen(3000,function(){
+    console.log("server is started at 3000");
+})
