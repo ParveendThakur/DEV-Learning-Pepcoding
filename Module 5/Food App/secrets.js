@@ -1,1 +1,1 @@
-cnHMOY9xsKcTgj8w
+export const password = "cnHMOY9xsKcTgj8w"
