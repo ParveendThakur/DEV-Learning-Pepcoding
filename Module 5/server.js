@@ -19,6 +19,14 @@ app.post("/sayHello",function(req,res){
     res.send("post wala Hello");
 })
 
+app.get("/getMultiply/:num1/:num2",function(req,res){
+    console.log(req.params);
+    let num1 = req.params.num1;
+    let num2 = req.params.num2;
+    let mul = num1*num2;
+
+    res.end("Multiply of params are "+mul)
+})
 
 
 // get kana hai data from sayBye
