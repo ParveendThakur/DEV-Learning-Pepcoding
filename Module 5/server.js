@@ -35,6 +35,14 @@ app.patch("/sayHello",function(req,res){
     res.send("Hello from patch");
 })
 
+app.delete("/sayHello",function(req,res){
+    user = {};
+    res.json({
+        message:"Deletion done",
+        user:user
+    })
+})
+
 app.get("/getMultiply/:num1/:num2",function(req,res){
     console.log(req.params);
     let num1 = req.params.num1;
