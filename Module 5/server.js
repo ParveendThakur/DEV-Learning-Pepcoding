@@ -20,7 +20,6 @@ app.post("/sayHello",function(req,res){
     console.log(req);
     res.send("post wala Hello");
 })
-
 //post
 app.post("/sayHello",function(req,res){
     user = req.body;
@@ -62,9 +61,9 @@ app.get("/getMultiply/:num1/:num2",function(req,res){
 })
 
 
-// get kana hai data from sayBye
+//get kana hai data from sayBye
 app.get("/sayBye",function(req,res){
-    res.send("Bye");
+    res.end("Bye");
 })
 
 // 3000 - address of a server -> on a given machine
