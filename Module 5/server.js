@@ -1,25 +1,25 @@
 //require express
 const express = require("express")
-
 // you have to write it -> app signifies -> your server
 
 const app = express();
 
+
+app.use(express.json());
+
 let user;
 
 app.get("/",function(req,res){
-    res.send("Homepage");
+    res.end("Homepage");
 })
 
-// get karna hai data from sayHello
-app.get("/sayhello",function(req,res){
-    res.send("Hello from server");
+//get karna hai data from sayHello
+app.get("/sayHello",function(req,res){
+    res.json({
+        user:user
+    })
 })
 
-app.post("/sayHello",function(req,res){
-    console.log(req);
-    res.send("post wala Hello");
-})
 //post
 app.post("/sayHello",function(req,res){
     user = req.body;
