@@ -1,8 +1,8 @@
 const express = require("express")
-
+const {userModel} = require('./userModel')
 const app = express();
 
-const userModel = require("./userModel");
+// const userModel = require("./userModel");
 
 
 
