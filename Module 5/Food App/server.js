@@ -57,7 +57,6 @@ app.post("/login",async function(req,res){
         console.log(err.message);
     }
 })
-
 app.get("/users", protectRoute,async function(req,res){
     try{
         let users = await userModel.find();
@@ -68,6 +67,20 @@ app.get("/users", protectRoute,async function(req,res){
     // console.log(req.cookies);
 
     // res.send("cookie read");
+})
+
+app.get("/user",protectRoute, async function(req,res){
+    try{
+        const userId = req.userId;
+        const user = await userModel.findById(userId);
+        //to send json data
+        res.json({
+            data:user,
+            message:"Data about logged in user is send"
+        })
+    }catch(err){
+        res.send(err.message)
+    }
 
 })
 
@@ -78,6 +91,8 @@ function protectRoute(req,res,next){
         if(cookies.JWT){
             const token = jwt.verify(JWT,secretKey);
             console.log(token);
+            let userId = token.data;
+            req.userId = userId;
             next();
         }else{
             res.send("You are not logged in. Kindly login");
@@ -86,9 +101,8 @@ function protectRoute(req,res,next){
         console.log(err);
         res.send(err.message)
     }
-
+    
 }
-
 app.listen(3000,function(){
     console.log("server started at 3000");
-}) 
+})
