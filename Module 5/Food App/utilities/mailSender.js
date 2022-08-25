@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 const password = require("./secrets")
 
-async function mailSender() {
+async function mailSender(email,otp) {
 
 
   let transporter = nodemailer.createTransport({
@@ -9,18 +9,17 @@ async function mailSender() {
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "parveend1234@gmail.com", // generated ethereal user
+      user: "mohammad.aman@pepcoding.com", // generated ethereal user
       pass: password, // generated ethereal password
     },
   });
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"FoodApp 👻" <food.app@example.com>', // sender address
-    to: "parveend1234@gmail.com", "pankajkumar16513@gmail.com" , "brijmohan1265@gmail.com" // list of receivers
-    subject: "Hello ✔Testing for FJP6", // Subject line
-    text: "Hello world?", // plain text body
-    html: "<b>Hello world?</b>", // html body
+    from: '"FoodApp 👻" <food.app@gmail.com>', // sender address
+    to: email, // list of receivers
+    subject: "Hello ✔ Your Reset Password Request", // Subject line
+    html: `<b>Your reset Otp is ${otp}, Your otp will expire in 5 minutes</b>`, // html body
   });
 
   console.log("Message sent: %s", info.messageId);
@@ -31,4 +30,4 @@ async function mailSender() {
   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 }
 
-mailSender().catch(console.error);
+module.exports = mailSender;

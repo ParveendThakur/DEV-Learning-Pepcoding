@@ -1,25 +1,23 @@
-
 //tech knowledge
 //(scheme) -> set of features and rules a certain entity should follow
 const mongoose = require('mongoose')
 const {Schema} = mongoose
-const pass = require("./secrets");
-//let dbLink = `mongodb+srv://dbUser:${pass}@cluster0.o6s3ey1.mongodb.net/?retryWrites=true&w=majority`
+const pass = require("../secret");
 
-// // let dblink = `mongodb+srv://dbUser:9YrdlRoCdYPC3aY1@cluster0.ovod3sb.mongodb.net/?retryWrites=true&w=majority`
-let dblink = `mongodb+srv://dbUser:MjAQyVa3DVlYkpKY@cluster0.ovod3sb.mongodb.net/?retryWrites=true&w=majority`
-
-
+let dbLink = `mongodb+srv://dbUser:${pass}@cluster0.o6s3ey1.mongodb.net/?retryWrites=true&w=majority`
 mongoose.connect(dbLink).then(function(){
     console.log("connected");
 }).catch(function(err){
     console.log("error",err);
 })
+
+
 //how to create a schema -> only entries written will be added to your db no one else.
+
 let userSchema = new Schema({
-  name:{
-      type:String,
-      required:[true,"Name is not given. Please provide a name"]
+    name:{
+        type:String,
+        required:[true,"Name is not given. Please provide a name"]
     },
     password:{
         type:String,
@@ -27,7 +25,6 @@ let userSchema = new Schema({
     },
     confirmPassword:{
         type:String,
-
         required:[true,"Confirm Password is Missing"],
         //custom validator
         validate:{
@@ -40,7 +37,6 @@ let userSchema = new Schema({
     },
     email:{
         type:String,
-
         required:[true,'email is missing'],
         unique:true
     },
@@ -50,19 +46,20 @@ let userSchema = new Schema({
         maxLength:[10,"more than 10 numbers"]
     },
     pic:{
-      type:String,
-      default:"logo2.png"
-   },
+        type:String,
+        default:"logo2.png"
+    },
     otp:{
-       type:String
+        type:String
     },
     otpExpiry:{
-      type:Date
-  },
+        type:Date
+    },
     address:{
         type:String
-  }
+    }
 })
 
 const userModel = mongoose.model('FoodUserModel',userSchema);
+
 module.exports = userModel;
