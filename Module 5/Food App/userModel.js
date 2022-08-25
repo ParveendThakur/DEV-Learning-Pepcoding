@@ -51,12 +51,15 @@ let userSchema = new Schema({
         maxLength:[10,"more than 10 numbers"]
     },
     pic:{
-        type:String,
-        default:"logo2.png"
+      type:String,
+      default:"logo2.png"
+   },
+    otp:{
+       type:String
     },
     address:{
         type:String
-    }
+  }
 })
 
 const userModel = mongoose.model('FoodUserModel',userSchema);
