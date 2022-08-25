@@ -5,6 +5,11 @@ const app = express();
 //npm i cookie-parser
 const cookieParser = require("cookie-parser");
 
+//npm i jsonwebtoken
+var jwt = require('jsonwebtoken');
+const secretKey = "kjds5439jkfdsljfsop"
+
+
 app.use(express.json());
 app.use(cookieParser());
 
