@@ -2,14 +2,11 @@ const  express = require("express")
 const app = express();
 //npm i cookie-parser
 const cookieParser = require("cookie-parser");
-
 //npm i jsonwebtoken
 var jwt = require('jsonwebtoken');
 const secretKey = "kjds5439jkfdsljfsop"
-
 app.use(express.json());
 app.use(cookieParser());
-
 const userModel = require("./userModel");
 //signup input:
 //name,
@@ -41,7 +38,6 @@ app.post("/login",async function(req,res){
             console.log(user);
             if(user){
                 if(user.password == password){
-
                     //create JWT -> payload, secret key, algo by default -> SHA256
                     const token = jwt.sign({ data: user['_id'] }, secretKey);
                     console.log(token);
@@ -62,12 +58,37 @@ app.post("/login",async function(req,res){
     }
 })
 
-app.get("/users",function(req,res){
-    console.log(req.cookies);
+app.get("/users", protectRoute,async function(req,res){
+    try{
+        let users = await userModel.find();
+        res.json(users);
+    }catch(err){
+        res.send(err.message);
+    }
+    // console.log(req.cookies);
 
-    res.send("cookie read");
+    // res.send("cookie read");
+
 })
+
+function protectRoute(req,res,next){
+    try{
+        let cookies = req.cookies;
+        let JWT = cookies.JWT;
+        if(cookies.JWT){
+            const token = jwt.verify(JWT,secretKey);
+            console.log(token);
+            next();
+        }else{
+            res.send("You are not logged in. Kindly login");
+        }
+    }catch(err){
+        console.log(err);
+        res.send(err.message)
+    }
+
+}
 
 app.listen(3000,function(){
     console.log("server started at 3000");
-})
+}) 
