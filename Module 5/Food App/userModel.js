@@ -67,3 +67,4 @@ let userSchema = new Schema({
 
 const userModel = mongoose.model('FoodUserModel',userSchema);
 module.exports = userModel;
+
