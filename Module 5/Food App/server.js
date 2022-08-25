@@ -1,5 +1,9 @@
 const  express = require("express")
 const app = express();
+
+//npm i cookie-parser
+const cookieParser = require("cookie-parser");
+
 app.use(express.json());
 const userModel = require("./userModel");
 //signup input:
