@@ -57,6 +57,9 @@ let userSchema = new Schema({
     otp:{
        type:String
     },
+    otpExpiry:{
+      type:Date
+  },
     address:{
         type:String
   }
