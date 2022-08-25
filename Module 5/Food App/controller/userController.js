@@ -27,6 +27,8 @@ async function getAllUsersController(req,res){
 }
 
 
+
+
 module.exports = {
     profileController:profileController,
     getAllUsersController:getAllUsersController

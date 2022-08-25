@@ -9,5 +9,4 @@ userRouter.get("/users", protectRoute,getAllUsersController)
 
 userRouter.get("/user",protectRoute, profileController)
 
-
 module.exports = userRouter;

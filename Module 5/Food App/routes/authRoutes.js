@@ -6,7 +6,6 @@ const {    signupController,
     resetPasswordController,
     forgetPasswordController} = require("../controller/authController")
 
-
 authRouter.post("/signup",signupController)
 
 authRouter.post("/login",loginController)

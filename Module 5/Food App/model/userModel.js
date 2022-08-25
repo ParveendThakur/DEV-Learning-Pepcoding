@@ -1,5 +1,4 @@
 
-
 //tech knowledge
 //(scheme) -> set of features and rules a certain entity should follow
 const mongoose = require('mongoose')
@@ -67,4 +66,3 @@ let userSchema = new Schema({
 
 const userModel = mongoose.model('FoodUserModel',userSchema);
 module.exports = userModel;
-
