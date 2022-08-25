@@ -34,3 +34,42 @@ async function main() {
   return 'done.';
 }
 
+
+ // 16.08.2022
+//how to create a schema -> only entries written will be added to your db no one else.
+
+let userSchema = new Schema({
+  name:{
+      type:String,
+      required:true
+  },
+  password:{
+      type:String,
+      required:true
+  },
+  confirmPassword:{
+      type:String,
+      required:true
+  },
+  email:{
+      type:String,
+      required:true,
+      unique:true
+  },
+  phoneNumber:{
+      type:String,
+      minLength:10,
+      maxLength:10
+  },
+  pic:{
+      type:String,
+      default:"logo2.png"
+  },
+  address:{
+      type:String
+  }
+})
+
+const userModel = mongoose.model('FoodUserModel',userSchema);
+
+module.exports = userModel; 
