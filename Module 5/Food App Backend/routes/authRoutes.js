@@ -15,3 +15,4 @@ authRouter.patch("/forgetPassword",forgetPasswordController)
 authRouter.patch("/resetPassword",resetPasswordController)
 
 module.exports = authRouter;
+

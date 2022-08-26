@@ -33,3 +33,4 @@ module.exports = {
     profileController:profileController,
     getAllUsersController:getAllUsersController
 }
+
